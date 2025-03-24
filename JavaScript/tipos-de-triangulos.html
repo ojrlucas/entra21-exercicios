@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+    <main class="d-flex justify-content-center align-items-center bg-animacao">
+        <div class="exercicio-container d-block padding-bottom-none">
+            <h1 class="text-center display-6 mt-4 mb-4">Verificador de Triângulos</h1>
+            <label for="lado1">Informe o 1º lado: </label>
+            <input id="lado1" type="number" placeholder="Ex: 10">
+            <label for="lado2">Informe o 2º lado: </label>
+            <input id="lado2" type="number" placeholder="Ex: 10">
+            <label for="lado3">Informe o 3º lado: </label>
+            <input id="lado3" type="number" placeholder="Ex: 10">
+            <button onclick="veiricaTriangulo()" class="mt-3">Verificar</button>  
+            <p class="text-center mt-3">verifique o tipo do seu triângulo!</p>
+        </div>
+    </main>
+
+    <script>
+        function veiricaTriangulo() {
+            var lado1 = document.getElementById('lado1').value
+            var lado2 = document.getElementById('lado2').value
+            var lado3 = document.getElementById('lado3').value
+            var triangulo = null
+
+            if (lado1 === lado2 && lado2 === lado3) {
+                triangulo = 'Equilátero'
+            } else if (lado1 === lado2 || lado2 === lado3 || lado3 === lado1) {
+                triangulo = 'Isóceles'
+            } else {
+                triangulo = 'Escaleno'
+            }
+
+            document.getElementsByTagName('p')[0].innerHTML = 'O triâlgulo informado é: ' + triangulo
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+.bg-animacao {
+    animation: background-animacao 20s ease-in-out infinite; 
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+}
+
+.exercicio-container {
+    width: 500px;
+    height: auto;
+    background-color: rgb(250, 250, 250); 
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+
+.display-6 {
+    font-size: 30px;
+}
+
+input {
+    width: 90%;
+    margin-left: 27px;
+    height: 35px;
+}
+
+label, button {
+    width: 90%;
+    margin-left: 27px;
+}
+
+button {
+    background: linear-gradient(to right, #8a9cc7, #4a65b3);
+    color: white;
+    height: 35px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #8ac78e, #4ab354);
+}
+
+/*calculadora-imc*/
+.imc-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.imc-area {
+    margin-top: 20px;
+    width: 100%;
+    height: 35px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #cacbcc;
+}
+
+.imc-area p {
+    padding: 3px;
+}
+
+.padding-bottom-none {
+    padding-bottom: 0px;
+}
+
+#classificacao {
+    margin-top: -15px;
+}
+
+.magreza {
+    background: linear-gradient(to right, #0051ff, #96daf7);
+}
+
+.normal {
+    background: linear-gradient(to right, #1eb500, #6bba70);
+}
+
+.sobrepeso {
+    background: linear-gradient(to right, #d0d700, #cdcd7d);
+}
+
+.obesidade-I {
+    background: linear-gradient(to right, #ffbf00, #f7cf96);
+}
+
+.obesidade-II {
+    background: linear-gradient(to right, #ff3c00, #f7b696);
+}
+
+.obesidade-III {
+    background: linear-gradient(to right, #ff0000, #f79696);
+}
+
+/*Calculadora de Operações Matemáticas*/
+.main-calculadora {
+    background: #ddc7a0 url('../imagens/exercicios-js-imagens/calculadora-bg.jpg') no-repeat top left;
+}
+
+.calculadora {
+    width: 400px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    background: url('../imagens/exercicios-js-imagens/calculadora.png');
+    margin-right: 200px;
+}
+
+#visor {
+    width: 315px;
+    height: 70px;
+    margin: 40px 0px 10px 44px;
+    padding: 5px;
+    font-size: 40px;
+    background: none;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.calculadora button {
+    background: none ;
+    color: white;
+    border: none;
+}
+
+/*.calculadora button, #visor {
+    border: 4px solid rgb(255, 0, 0);
+}*/
+
+.botoes-remover {
+    position: absolute;
+    margin: 135px 0px 0px 27px;
+
+}
+
+.botoes-remover button {
+    width: 66px;
+    border-radius: 20px;
+    height: 40px;
+    margin: 10px 0px 13px 13px;     
+}
+
+.botoes-numeros-operadores {
+    position: absolute;
+    width: 250px;
+    margin: 198px 0px 0px 24px;
+}
+
+.botoes-numeros-operadores button {
+    width: 70px;
+    height: 56px;
+    border-radius: 5px;
+    margin: 0px 0px 12px 10px;
+}
+
+.operadores {
+    width: 100px;
+    position: absolute;
+    margin: 200px 0px 0px 265px;
+}   
+
+.operadores button {
+    width: 66px;
+    border-radius: 20px;
+    height: 40px;  
+    margin-bottom: 13px;
+}
+
+@keyframes background-animacao {
+    0% { background: linear-gradient(to right, #a2b1d1, #6b84c2); }
+    25% { background: linear-gradient(to right, #9bc3d1, #5f7bb3); }
+    50% { background: linear-gradient(to right, #93c0d1, #5572a6); }
+    75% { background: linear-gradient(to right, #9bb8d1, #5f7bb3); }
+    100% { background: linear-gradient(to right, #a2b1d1, #6b84c2); }
+}
+

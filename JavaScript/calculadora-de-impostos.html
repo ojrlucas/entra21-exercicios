@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora De Impostos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+    <main class="d-flex justify-content-center align-items-center bg-animacao">
+        <div class="exercicio-container d-block padding-bottom-none">
+            <h1 class="text-center display-6 mt-4 mb-4">Calculadora de Impostos</h1>
+            <label for="rendaAnual">Informe a sua renda anual (R$): </label>
+            <input id="rendaAnual" type="number" placeholder="Ex: 960000">
+            <button onclick="calculadoraDeImpostos()" class="mt-3">Verificar</button>  
+            <p class="text-center mt-3">verifique o seu imposto!</p>
+            <p></p>
+        </div>
+    </main>
+
+    <script>
+        function calculadoraDeImpostos() {
+            var rendaAnual = document.getElementById('rendaAnual').value 
+            var impostoIncidente = null
+            var valor = null
+            var bonus = null
+            
+            if (rendaAnual <= 30000) {
+                impostoIncidente = 5
+            } else if (rendaAnual > 30000 && rendaAnual <= 60000) {
+                impostoIncidente = 10
+            } else if (rendaAnual > 60000 && rendaAnual < 120000) {
+                impostoIncidente = 15
+            } else {
+                impostoIncidente = 20
+            }
+
+            impostoIncidente = (rendaAnual >= 100000) ? impostoIncidente - 2 : impostoIncidente
+            bonus = (rendaAnual >= 100000) ? '(bônus de 2%)' : ''
+
+            valor = (rendaAnual / 100) * impostoIncidente
+            document.getElementsByTagName('p')[0].innerHTML = 'O imposto a ser pago será de ' + impostoIncidente + '% ' + bonus + ' = R$ ' + valor.toFixed(2)
+        }
+    </script>
+</body>
+
+</html>

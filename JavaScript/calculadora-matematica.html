@@ -5,92 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            background-color: #d7cab1;
-        }
-        main {
-            width: 100%;
-            height: 100vh;
-            background: #ddc7a0 url('../../imagens/calculadora-bg.jpg') no-repeat top left;
-        }
-
-        .calculadora {
-            width: 400px;
-            height: 500px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 20px;
-            background: url(../../imagens/calculadora.png);
-            margin-right: 200px;
-        }
-
-        #visor {
-            width: 315px;
-            height: 70px;
-            margin: 40px 0px 10px 44px;
-            padding: 5px;
-            font-size: 40px;
-            background: none;
-            text-align: right;
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        button {
-            background: none ;
-            color: white;
-            border: none;
-        }
-
-        /*button, #visor {
-            border: 4px solid rgb(255, 0, 0);
-        }*/
-
-        .botoes-remover {
-            position: absolute;
-            margin: 135px 0px 0px 27px;
-
-        }
-
-        .botoes-remover button {
-            width: 66px;
-            border-radius: 20px;
-            height: 40px;
-            margin: 10px 0px 13px 13px;     
-        }
-
-        .botoes-numeros-operadores {
-            position: absolute;
-            width: 250px;
-            margin: 198px 0px 0px 24px;
-        }
-
-        .botoes-numeros-operadores button {
-            width: 70px;
-            height: 56px;
-            border-radius: 5px;
-            margin: 0px 0px 12px 10px;
-        }
-
-        .operadores {
-            width: 70px;
-            position: absolute;
-            margin: 200px 0px 0px 290px;
-        }   
-
-        .operadores button {
-            width: 66px;
-            border-radius: 20px;
-            height: 40px;  
-            margin-bottom: 13px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
+    
 </head>
 
 <body>
-    <main class="d-flex justify-content-end align-items-center">
+    <main class="d-flex justify-content-end align-items-center main-calculadora">
         <div class="calculadora d-grid">
             <input type="text" id="visor" disabled>
             <div class="botoes-remover">
