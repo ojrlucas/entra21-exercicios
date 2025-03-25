@@ -37,7 +37,7 @@ label, button {
 }
 
 button {
-    background: linear-gradient(to right, #8a9cc7, #4a65b3);
+    background: linear-gradient(to right, #a2b1d1, #6b84c2);
     color: white;
     height: 35px;
 }
@@ -47,21 +47,55 @@ button:hover {
 }
 
 /*calculadora-imc*/
+.calculadora-imc {
+    width: 700px;
+    height: 100vh;
+    box-shadow: none; 
+    padding-bottom: 30px;
+    border-radius: 0px;
+    padding: 40px;
+    background-color: #f3f3f3;
+}
+
+.classificacao {
+    width: calc(100% - 700px);
+}
+
+.classificacao p {
+    margin: 0;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
 .imc-container {
     height: 100vh;
     width: 100%;
 }
 
-.imc-area {
-    margin-top: 20px;
-    width: 100%;
-    height: 35px;
-    border-radius: 0px 0px 20px 20px;
-    background-color: #cacbcc;
+.imc-tabela {
+    color: white;
+    width: 90%;
 }
 
-.imc-area p {
-    padding: 3px;
+
+.imc-tabela thead {
+    background: linear-gradient(to right, #a2b1d1, #6b84c2);
+    height: 40px;
+}
+
+.imc-tabela th, .imc-tabela td {
+    width: 50%;
+    border: 1px solid black;
+    padding-left: 10px; 
+    text-align: left; 
+}
+
+.imc-tabela tbody>tr {
+    height: 40px;
+    background-color: #dcdcdc;
+    color: black;
 }
 
 .padding-bottom-none {
