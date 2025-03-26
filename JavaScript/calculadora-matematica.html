@@ -19,37 +19,33 @@
                 <button onclick="apagarUm()"></button>
             </div>
             <div class="botoes-numeros-operadores">
-                <button onclick="appendToVisor('7')"></button>
-                <button onclick="appendToVisor('8')"></button>
-                <button onclick="appendToVisor('9')"></button>
-                <button onclick="appendToVisor('4')"></button>
-                <button onclick="appendToVisor('5')"></button>
-                <button onclick="appendToVisor('6')"></button>
-                <button onclick="appendToVisor('1')"></button>
-                <button onclick="appendToVisor('2')"></button>
-                <button onclick="appendToVisor('3')"></button>
+                <button onclick="adicionarValor('7')"></button>
+                <button onclick="adicionarValor('8')"></button>
+                <button onclick="adicionarValor('9')"></button>
+                <button onclick="adicionarValor('4')"></button>
+                <button onclick="adicionarValor('5')"></button>
+                <button onclick="adicionarValor('6')"></button>
+                <button onclick="adicionarValor('1')"></button>
+                <button onclick="adicionarValor('2')"></button>
+                <button onclick="adicionarValor('3')"></button>
                 <button></button>
-                <button onclick="appendToVisor('0')"></button>
-                <button onclick="appendToVisor('.')"></button>
+                <button onclick="adicionarValor('0')"></button>
+                <button onclick="adicionarValor('.')"></button>
             </div>           
             
             <div class="operadores d-flex flex-wrap">
-                <button class="botoes-menores" onclick="appendToVisor('/')"></button>
-                <button class="botoes-menores" onclick="appendToVisor('*')"></button>     
-                <button class="botoes-menores" onclick="appendToVisor('+')"></button>
-                <button class="botoes-menores" onclick="appendToVisor('-')"></button>  
+                <button class="botoes-menores" onclick="adicionarValor('/')"></button>
+                <button class="botoes-menores" onclick="adicionarValor('*')"></button>     
+                <button class="botoes-menores" onclick="adicionarValor('+')"></button>
+                <button class="botoes-menores" onclick="adicionarValor('-')"></button>  
                 <button onclick="calcular()">=</button>   
             </div>
         </div>
     </main>
 
     <script>
-        function appendToVisor(value) {
-            document.getElementById('visor').value += value     
-        }
-
-        function limparVisor() {
-            document.getElementById('visor').value = ''
+        function adicionarValor(valor) {
+            document.getElementById('visor').value += valor     
         }
 
         function calcular() {
@@ -58,6 +54,10 @@
             } catch (error) {
                 document.getElementById('visor').value = 'Erro'
             }
+        }
+
+        function limparVisor() {
+            document.getElementById('visor').value = ''
         }
 
         function apagarUm() {
