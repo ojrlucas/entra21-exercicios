@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+    
+    <script>
+        //de objeto para JSON
+        const objeto = {nome: 'maria', email: 'maria@gmail.com', fone: '(47)9090-1020'}
+        console.log(objeto)
+        console.log(objeto.nome)
+
+        const objetojson = JSON.stringify(objeto)
+        console.log(objetojson)
+        console.log(objetojson.nome) //dá undefined, não imprime o nome por ter se tornado JSON
+
+        //de JSON para objetos
+        const meuJson = '{"marca": "Toyota", "modelo": "Etios", "cor": "Vermelho"}'
+        console.log(meuJson)
+        console.log(meuJson.marca) //dá undefined, não imprime a marca por ser um JSON
+
+        const meuObjeto = JSON.parse(meuJson)
+        console.log(meuObjeto)
+        console.log(meuObjeto.marca)
+        console.log(meuObjeto.modelo)
+
+    </script>
+</body>
+</html>
